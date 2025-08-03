@@ -4,3 +4,5 @@ mysql-connector-python
 sqlalchemy
 numpy
 matplotlib
+pymysql
+
