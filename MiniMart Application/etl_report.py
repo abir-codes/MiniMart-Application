@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 import streamlit as st
 import urllib.parse
 from setup import write_ca_cert
+import pymysql
 
 
 def get_engine():
@@ -71,4 +72,5 @@ def combined():
     combined_df["Remaining Stocks"] = combined_df["Added Stocks"] - combined_df["No. of Stocks Sold"]
     alerts_df = combined_df[combined_df["Minimum Stocks"]> combined_df["Remaining Stocks"]]
     return alerts_df,combined_df
+
 
